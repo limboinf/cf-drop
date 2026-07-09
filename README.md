@@ -43,7 +43,13 @@ const result = await drop('./dist', { onLog: console.error });
 
 ## Use as a Claude Code skill
 
-This repo ships an agent skill at [`skills/cf-drop/`](skills/cf-drop/SKILL.md). Install it so Claude Code can deploy for you when you say things like "deploy this folder" or "share a quick preview":
+This repo ships an agent skill at [`skills/cf-drop/`](skills/cf-drop/SKILL.md). Install it with the [skills CLI](https://github.com/vercel-labs/skills) so your agent (Claude Code, Cursor, Codex, OpenCode, …) can deploy for you when you say things like "deploy this folder" or "share a quick preview":
+
+```bash
+npx skills add limboinf/cf-drop
+```
+
+Or install manually by copying:
 
 ```bash
 # per-user (available in every project)
@@ -97,7 +103,13 @@ const result = await drop('./dist', { onLog: console.error });
 
 ### 作为 Claude Code skill 使用
 
-仓库自带 agent skill（[`skills/cf-drop/`](skills/cf-drop/SKILL.md)），装上后对 Claude Code 说「把这个文件夹部署一下」「分享个临时预览」就能自动触发：
+仓库自带 agent skill（[`skills/cf-drop/`](skills/cf-drop/SKILL.md)），用 [skills CLI](https://github.com/vercel-labs/skills) 一键安装（支持 Claude Code、Cursor、Codex、OpenCode 等），装上后说「把这个文件夹部署一下」「分享个临时预览」就能自动触发：
+
+```bash
+npx skills add limboinf/cf-drop
+```
+
+也可以手动拷贝安装：
 
 ```bash
 # 用户级（所有项目可用）

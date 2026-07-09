@@ -9,7 +9,8 @@
   "exports": "./lib/index.js",
   "files": [
     "bin",
-    "lib"
+    "lib",
+    "skills"
   ],
   "engines": {
     "node": ">=18.4"

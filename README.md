@@ -41,6 +41,18 @@ const result = await drop('./dist', { onLog: console.error });
 3. Binds the assets to a temporary `drop-*` Worker and enables its `workers.dev` subdomain
 4. Returns the live URL plus a claim link to keep the site permanently
 
+## Use as a Claude Code skill
+
+This repo ships an agent skill at [`skills/cf-drop/`](skills/cf-drop/SKILL.md). Install it so Claude Code can deploy for you when you say things like "deploy this folder" or "share a quick preview":
+
+```bash
+# per-user (available in every project)
+mkdir -p ~/.claude/skills && cp -r skills/cf-drop ~/.claude/skills/
+
+# or per-project (committed with your repo)
+mkdir -p .claude/skills && cp -r skills/cf-drop .claude/skills/
+```
+
 ## Good to know
 
 - **Deployments are public.** Anyone with the URL can see your files. Dotfiles and `node_modules` are skipped when uploading a folder.
@@ -82,6 +94,18 @@ const result = await drop('./dist', { onLog: console.error });
 2. 通过 Workers 静态资产 API 上传文件（内容寻址、自动去重）
 3. 将资产绑定到临时 `drop-*` Worker 并开启 `workers.dev` 子域名
 4. 返回站点 URL 和认领链接（认领后永久保留）
+
+### 作为 Claude Code skill 使用
+
+仓库自带 agent skill（[`skills/cf-drop/`](skills/cf-drop/SKILL.md)），装上后对 Claude Code 说「把这个文件夹部署一下」「分享个临时预览」就能自动触发：
+
+```bash
+# 用户级（所有项目可用）
+mkdir -p ~/.claude/skills && cp -r skills/cf-drop ~/.claude/skills/
+
+# 或项目级（随仓库提交）
+mkdir -p .claude/skills && cp -r skills/cf-drop .claude/skills/
+```
 
 ### 注意事项
 

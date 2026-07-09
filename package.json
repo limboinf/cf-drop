@@ -1,0 +1,36 @@
+{
+  "name": "cf-drop",
+  "version": "0.1.0",
+  "description": "Upload a folder or zip to Cloudflare Drop from the command line — no account needed, live on workers.dev for 60 minutes",
+  "type": "module",
+  "bin": {
+    "cf-drop": "bin/cf-drop.js"
+  },
+  "exports": "./lib/index.js",
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "engines": {
+    "node": ">=18.4"
+  },
+  "keywords": [
+    "cloudflare",
+    "cloudflare-drop",
+    "deploy",
+    "static-site",
+    "workers",
+    "cli",
+    "upload"
+  ],
+  "author": "limbo",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/limboinf/cf-drop.git"
+  },
+  "homepage": "https://github.com/limboinf/cf-drop#readme",
+  "bugs": {
+    "url": "https://github.com/limboinf/cf-drop/issues"
+  }
+}
